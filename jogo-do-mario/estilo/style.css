@@ -1,0 +1,96 @@
+@import url('https://fonts.cdnfonts.com/css/upheaval');
+
+*{
+    
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 70pt;
+    font-family: 'Upheaval TT (BRK)', sans-serif;
+    color:red;
+}
+::-webkit-scrollbar{
+    width: 0px;
+    height: 0px;
+}
+
+.game-board{
+    
+    width: 100%;
+    height: 500px;
+    border-bottom:  15px solid rgb(9, 116, 9);
+    background: linear-gradient(#87CEEB, #E0F6FF);
+    background-color: white;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.377);
+    position:absolute;
+    overflow: hidden;/* >>>TUDO QUE SAIR DA TELA VAI SER APAGADO!<<< */
+}
+.tubo{
+    position:absolute;
+    bottom: 0;
+    width: 80px;
+    animation: tubo-animation 2s infinite linear;
+    
+}
+
+.mario{
+    position: absolute;
+    width: 100px;
+    bottom: 0;
+   
+    
+
+}
+
+.nuvem{
+    position: absolute;
+    width: 550px;
+    animation: nuvem-animation 20s infinite linear;
+    
+}
+
+.pulo{
+    animation: pulo-do-mario 600ms ease-out;
+}
+
+
+@keyframes tubo-animation {/* >>>> ANIMAÇÃO DO TUBO <<< */
+    from{
+        right: -200px;
+    }
+
+    to{
+        right: 100%;
+    }
+}
+
+@keyframes pulo-do-mario{
+    0%{
+        bottom: 0;
+    }
+
+    40%{
+        bottom: 180px;
+
+    }
+
+    50%{
+        bottom: 180px;
+    }
+
+    60%{
+        bottom: 180px;
+        
+    }
+
+    100%{
+        bottom: 0;
+    }
+}
+
+@keyframes nuvem-animation {
+    from{
+        right: -550px;
+    }
+    to{
+        right: 100%;
+    }
+}
