@@ -7,19 +7,24 @@
     font-family: 'Upheaval TT (BRK)', sans-serif;
     color:red;
 }
+body{
+    background-color:rgb(9, 116, 9);
+}
 ::-webkit-scrollbar{
     width: 0px;
     height: 0px;
 }
 
+
+
 .game-board{
-    background-color: black;
+    margin-top: -10px;
+    margin-left: -10px;
     width: 100%;
     height: 500px;
-    border-bottom:  15px solid rgb(9, 116, 9);
+    border-bottom:  15px solid rgb(11, 82, 11);
     background: linear-gradient(#87CEEB, #E0F6FF);
     background-color: white;
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.377);
     position:absolute;
     overflow: hidden;/* >>>TUDO QUE SAIR DA TELA VAI SER APAGADO!<<< */
 }
@@ -40,6 +45,7 @@
 
 }
 
+
 .nuvem{
     position: absolute;
     width: 550px;
@@ -51,9 +57,7 @@
     animation: pulo-do-mario 600ms ease-out;
 }
 
-#terra{
-    background-color: black;
-}
+
 
 
 @keyframes tubo-animation {/* >>>> ANIMAÇÃO DO TUBO <<< */
