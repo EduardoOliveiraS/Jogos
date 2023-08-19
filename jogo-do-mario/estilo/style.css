@@ -32,7 +32,7 @@ body{
     position:absolute;
     bottom: 0;
     width: 80px;
-    animation: tubo-animation 0.7s infinite linear;
+    animation: tubo-animation 0.8s infinite linear;
     
 }
 
@@ -57,8 +57,19 @@ body{
     animation: pulo-do-mario 600ms ease-out;
 }
 
+/* Adicione estilos responsivos para o botão */
+        #recarregar {
+            display: block;
+            margin: 10px auto;
+            padding: 10px 20px;
+            font-size: 18px;
+        }
 
-
+        @media (max-width: 768px) {
+            #recarregar {
+                font-size: 16px;
+            }
+        }
 
 @keyframes tubo-animation {/* >>>> ANIMAÇÃO DO TUBO <<< */
     from{
@@ -100,5 +111,30 @@ body{
     }
     to{
         right: 100%;
+    }
+}
+
+/* Estilos para telas menores */
+@media (max-width: 768px) {
+    .game-board {
+        max-width: 100%;
+        padding: 20px;
+    }
+    
+    .mario {
+        width: 130px;
+    }
+    
+    .tubo {
+        width: 100px;
+    }
+    
+    #contador,
+    #resultado {
+        font-size: 20px;
+    }
+    
+    #resultado {
+        top: 40%;
     }
 }
